@@ -19,5 +19,4 @@ public:
 	UPROPERTY(EditInstanceOnly, Category = "PatrolRoute")
 		TArray <AActor*> PatrolPoints;
 	
-	
 };
