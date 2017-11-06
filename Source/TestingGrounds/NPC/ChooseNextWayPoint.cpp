@@ -10,7 +10,7 @@ EBTNodeResult::Type UChooseNextWayPoint::ExecuteTask(UBehaviorTreeComponent& Own
 	UBlackboardComponent* BlackBoardComp = OwnerComp.GetBlackboardComponent();
 	uint16 Index = BlackBoardComp->GetValueAsInt(IndexKey.SelectedKeyName);
 
-	APawn* PatrolCharacter = OwnerComp.GetAIOwner()->GetControlledPawn();
+	APawn* PatrolCharacter = OwnerComp.GetAIOwner()->GetPawn();
 
 	if (!ensure(PatrolCharacter))return EBTNodeResult::Failed;
 	UPatrolComponent *PatrolComp = PatrolCharacter->FindComponentByClass<UPatrolComponent>();
